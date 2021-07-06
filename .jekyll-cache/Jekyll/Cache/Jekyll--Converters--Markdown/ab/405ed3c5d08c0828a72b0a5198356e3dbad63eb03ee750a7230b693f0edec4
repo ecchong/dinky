@@ -1,0 +1,12 @@
+I")<h2 id="how-to-set-fact-on-another-host">How to set fact on another host?</h2>
+
+<p>Use delegate_to and delegate_fact together</p>
+
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="pi">-</span> <span class="na">name</span><span class="pi">:</span> <span class="s">Store some fact on host B</span>
+  <span class="na">set_fact</span><span class="pi">:</span>
+    <span class="na">server_description</span><span class="pi">:</span> <span class="s">This is host B</span>
+  <span class="na">delegate_to</span><span class="pi">:</span> <span class="s">host_B</span>
+  <span class="na">delegate_facts</span><span class="pi">:</span> <span class="no">true</span>
+</code></pre></div></div>
+<p>Otherwise, fact will not be associate with delegate_to host.</p>
+:ET
